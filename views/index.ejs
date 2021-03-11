@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Weather Forecast</title>
+</head>
+<body>
+
+    <div class="wrapper">
+
+      <div class="weather">
+        <h1> Daily Weather </h1>
+        <p>5 days forecast for your city!</p>    
+        <form action="/" method="POST">
+           <input type="text" name="city" class="ghost-input" placeholder="Enter your city name">
+        </form>
+      </div> 
+
+      <div class="container">
+
+        <div class="today">
+            <% if(temp_max !== null)  {%>
+                <h1 class="temp_max"><%= temp_max %></h1>
+            <% } %>
+
+            <% if(temp_min !== null)  {%>
+              <h1 class="temp_min"><%= temp_min %></h1>
+            <% } %>
+
+          <div class="icon-des">
+            <% if(icon !== null)  {%>
+              <img class="icon" src="http://openweathermap.org/img/w/<%= icon %>.png" alt="">
+            <% } %>
+            <% if(des !== null)  {%>
+              <h3><%= des %></h3>
+            <% } %>
+          </div>
+
+
+            <% if(city !== null)  {%>
+             <p class="city"><%= city %></p>
+             <% } %>
+        </div>
+
+        <div class="result">
+            <h1 class="temp__max"> 30</h1>
+            <h2 class="temp__min"> 20</h2>
+            <div class="icon__des">
+                <img src="http://openweathermap.org/img/w/04n.png">
+                <h3> overcast clouds</h3>
+            </div>
+            <p class="day">Sat</p>
+        </div>
+
+        <div class="result">
+            <h1 class="temp__max"> 30</h1>
+            <h2 class="temp__min"> 20</h2>
+            <div class="icon__des">
+                <img src="http://openweathermap.org/img/w/04n.png">
+                <h3> overcast clouds</h3>
+            </div>
+            <p class="day">Sun</p>
+        </div>
+
+        <div class="result">
+            <h1 class="temp__max"> 10</h1>
+            <h2 class="temp__min"> 20</h2>
+            <div class="icon__des">
+                <img src="http://openweathermap.org/img/w/04n.png">
+                <h3> overcast clouds</h3>
+            </div>
+            <p class="day">Mon</p>
+        </div>
+
+        <div class="result">
+            <h1 class="temp__max"> 30</h1>
+            <h2 class="temp__min"> 20</h2>
+            <div class="icon__des">
+                <img src="http://openweathermap.org/img/w/04n.png">
+                <h3> overcast clouds</h3>
+            </div>
+            <p class="day">Tue</p>
+        </div>
+
+        
+        </div>
+      </div>
+
+    </div>
+</body>
+</html>
